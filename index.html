@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous">
+    </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand ml-5" href="index.html">Simple Services</a>
+                <button class="navbar-toggler d-lg-none" type="button"
+                    data-toggle="collapse" data-target="#collapsibleNavId"
+                    aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <form action="./index.html" class="form-inline my-2 my-lg-0 mx-auto" method="post">
+                        <input name="search" list="pages" class="form-control mr-sm-2" type="text"
+                            placeholder="Type any service">
+                        <button name="searchbutton" class="btn btn-outline-success my-2 my-sm-0"
+                            type="submit">Search</button>
+                    </form>
+                    
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <button class="btn btn-outline-info my-2 my-sm-0"
+                        type="button" data-toggle="modal" data-target="#signUpModal">Register Now!</button>
+                    </ul>
+                    <ul class="mt-lg-3">
+                        <button class="btn btn-outline-info my-2 my-sm-0"
+                        type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+                    </ul>
+
+                    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog"    aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title ml-auto">Registration Form</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="login-form mx-5">
+                                        <form action="index.html" method="post">      
+                                            <div class="form-group">
+                                                <input name="name" type="text" class="form-control" placeholder="Your Name" required="required">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <input name="username" type="text" class="form-control" placeholder="Username" required="required">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input name="age" type="number" class="form-control" placeholder="Your Age" required="required">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input name="location" type="text" class="form-control" placeholder="Your Location" required="required">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input name="address" type="text" class="form-control" placeholder="Your address in one line" required="required">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input name="password" type="password" class="form-control" placeholder="Password" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <button name="register" type="submit" class="btn btn-info btn-block">Register</button>
+                                            </div>
+                                            <div class="clearfix">
+                                                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                                            </div>        
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title ml-auto">Sign In</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="login-form mx-5">
+                                        <form action="index.php" method="post">      
+                                            <div class="form-group">
+                                                <input name="username" type="text" class="form-control" placeholder="Username" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="password" type="password" class="form-control" placeholder="Password" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <button name="login" type="submit" class="btn btn-info btn-block">Log in</button>
+                                            </div>
+                                            <div class="clearfix">
+                                                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                                            </div>        
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>  
+
+        <div class="wrapper">
+            <nav id="sidebar">
+                <ul class="list-unstyled components sticky-top">
+                    <p>SERVICES</p> 
+                    <li class="active">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#electricalSubmenu" data-toggle="collapse"
+                            aria-expanded="false" class="dropdown-toggle">Daily Service</a>
+                            <ul class="collapse list-unstyled" id="electricalSubmenu">
+                                <li>
+                                    <a href="./Subpages/dailyneeds.html">Daily Needs service</a>
+                                </li>
+                                <li>
+                                    <a href="./Subpages/grocery.html">Grocery service</a>
+                                </li>
+                                <li>
+                                    <a href="./Subpages/newspaper.html">News Paper service</a>
+                                </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#salonSubmenu" data-toggle="collapse"
+                            aria-expanded="false" class="dropdown-toggle">Medical Service</a>
+                        <ul class="collapse list-unstyled" id="salonSubmenu">
+                            <li>
+                                <a href="./Subpages/hospital.html">Hospital Near me</a>
+                            </li>
+                            <li>
+                                <a href="./Subpages/medical.html">Medical Shop Near me</a>
+                            </li>
+                            <li>
+                                <a href="./Subpages/ambulance.html">Ambulance service</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="main-wrapper" class="col-md-10 float-right">
+                <div id="main">
+                    <div class="Jumbotron">
+                        <h1 class="text-center">Super services for You...</h1>
+                        <p class="text-center mt-3">Do you have a health issue that needs attention, we have a solution for you.</p>
+                        <p class="text-center">Verified Professional | On Time Service | At Your Doorsteps</p>
+                        <p class="text-center">Solution is here!</p>
+                    </div>
+                    <div class="container text-muted mt-3">
+
+                      <h2 class="mt-5 mb-4"> Daily Servises  </h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="images/dair.jpg" alt="Daily Needs">
+                                        <div class="card-body">
+                                          <h3 class="card-title">Daily Needs</h3>
+                                          <p class="card-text">daily needs services at your door step.</p>
+                                          <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#daily">Order</button>
+                                        </div>
+                                </div>
+                            </div>
+
+                          <div class="modal fade" id="daily" tabindex="-1"      role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title ml-auto">List</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="login-form mx-5">
+                                        <form action="index.html" method="post">      
+                                            <div class="form-group">
+                                                <label for="Textarea">Items you need..</label>
+                                                <textarea class="form-control" id="Textarea" rows="5" placeholder="Write your Items Here"></textarea>
+                                            </div> 
+                                            <div class="form-group">
+                                                <button name="order" type="submit" class="btn btn-info btn-block">Place Order</button>
+                                            </div>       
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="images/gro.jpg" alt="Grocery">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Grocery Services</h3>
+                                        <p class="card-text">Grocery Ingredient deliver to you. </p>
+                                        <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#groc">Order</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal fade" id="groc" tabindex="-1"      role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title ml-auto">List</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="login-form mx-5">
+                                        <form action="index.html" method="post">      
+                                            <div class="form-group">
+                                                <label for="Textarea">Ingredients you need..</label>
+                                                <textarea class="form-control" id="Textarea" rows="5" placeholder="Write your Ingredients"></textarea>
+                                            </div> 
+                                            <div class="form-group">
+                                                <button name="order" type="submit" class="btn btn-info btn-block">Place Order</button>
+                                            </div>       
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" id="pest-image" src="images/news3.jpg" alt="News Paper">
+                                        <div class="card-body">
+                                            <h3 class="card-title">News Paper</h3>
+                                            <p class="card-text">News paper services in your arear.</p>
+                                            <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#daily">Order</button>  
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container text-muted mt-3">
+                        <h2 class="mt-5 mb-4"> Medical Services </h2>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="images/hospital.jpg" alt="Hospitals">
+                                        <div class="card-body">
+                                          <h3 class="card-title">Hospital Near You</h3>
+                                          <p class="card-text">Hospital details and their contacts.</p>
+                                          <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#daily">Order</button>  
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="images/medical.jpg" alt="medical shops">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Medical Shop</h3>
+                                        <p class="card-text">Medical service which is near to you.</p>
+                                       <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#daily">Order</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 mr-5">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="images/ambulance.jpg" alt="Ambulance">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Ambulance service</h3>
+                                            <p class="card-text">Ambulance service with details.</p>
+                                            <button class="btn btn-outline-info my-2 my-sm-0"
+                                             type="button" data-toggle="modal" data-target="#daily">Order</button>  
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbotron mt-5 mb-2">
+
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+           <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+                integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+                crossorigin="anonymous"></script> 
+            <script
+                src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+                integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+                crossorigin="anonymous"></script>
+
+                <script src="./app.js"></script>
+  </body>
+</html>
